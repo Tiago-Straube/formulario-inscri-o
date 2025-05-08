@@ -39,3 +39,46 @@ input[type='date']{
     select{
         background: url(/src/assets/icons/arrow-down-01-1.svg)no-repeat calc(100% - 1rem);
     }
+
+    .address .flex {
+        gap: 1.25rem;
+
+    }
+
+    .input-wrapper:has([disable]){
+        opacity: .5;
+    }
+
+    input {
+     &[disable]{
+            background-color: var(--surface-disable);
+            border: 1px solid var(--stroke-default);
+            color: var(--text-primary)}
+
+    &:invalid {
+        border: 1px solid var(--semantic-error);
+    }    
+        }
+  small {
+            font: var(--text-sm);
+            color: #78716C;
+            display: inline-block;
+            margin-top: .25rem;
+                }
+    .error {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: .75rem;
+        font: var(--text-sm);
+        color: var(--semantic-error);
+    }
+    .input-wrapper label {
+        margin-top: .50rem;
+    }
+
+    input {
+        &:valid + .error {
+            opacity: 0;;
+        }
+    }
